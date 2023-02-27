@@ -1,14 +1,11 @@
 function start_game(){
 	name = prompt("User name");
-	loadpage("./html/game.html");
+	loadpage("game.html");
 }
 
+
 function exit (){
-	if (name != ""){
-		alert("Leaving " + name + "'s game");
-	}
-	name = "";
-}
+	loadpage("./index.html")
 
 function options(){
 	// TODO: Open options menu
