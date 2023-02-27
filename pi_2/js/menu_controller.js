@@ -1,15 +1,13 @@
 function start_game(){
 	name = prompt("User name");
-	loadpage("game.html");
+	loadpage("./html/game.html");
 }
 
-
 function exit (){
-	loadpage("./index.html")
+	loadpage("../index.html");
+}
 
 function options(){
 	// TODO: Open options menu
 	console.log("Options menu button");
 }
-
-
