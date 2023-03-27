@@ -1,11 +1,11 @@
 var options = function(){
 	// Aquí dins hi ha la part privada de l'objecte
 	var options_data = {
-		cards:2, dificulty:"hard"
+		cards:2, difficulty:"hard"
 	};
 	var load = function(){
-		var json = localStorage.getItem("config") || '{"cards":2,"dificulty":"hard"}';
-		options_data = JSON.parse(json);
+		var json = localStorage.getItem("config") || '{"cards":2,"difficulty":"hard"}';
+		options_data = JSON.parse(json)
 	};
 	var save = function(){
 		localStorage.setItem("config", JSON.stringify(options_data));
@@ -15,11 +15,11 @@ var options = function(){
 		el: "#options_id",
 		data: {
 			num: 2,
-			dificulty: "normal"
+			difficulty: "normal"
 		},
 		created: function(){
 			this.num = options_data.cards;
-			this.dificulty = options_data.dificulty;
+			this.difficulty = options_data.difficulty;
 		},
 		watch: {
 			num: function(value){
@@ -32,13 +32,13 @@ var options = function(){
 		methods: { 
 			discard: function(){
 				this.num = options_data.cards;
-				this.dificulty = options_data.dificulty;
+				this.difficulty = options_data.difficulty;
 			},
 			save: function(){
 				options_data.cards = this.num;
-				options_data.dificulty = this.dificulty;
+				options_data.difficulty = this.difficulty;
 				save();
-				loadpage("../");
+				loadpage("../index.html");
 			}
 		}
 	});
@@ -50,15 +50,15 @@ var options = function(){
 		getNumOfCards: function (){
 			return options_data.cards;
 		},
-		getDificulty: function (){
-			return options_data.dificulty;
+		getDifficulty: function (){
+			return options_data.difficulty;
 		}
 	}; 
 }();
 
 console.log(options.getOptionsString());
 console.log(options.getNumOfCards());
-console.log(options.getDificulty());
+console.log(options.getDifficulty());
 console.log(options.options_data);
 
 

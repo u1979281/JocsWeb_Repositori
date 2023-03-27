@@ -13,12 +13,12 @@
 				<input type="number" id="labelnumber" v-model="num">
 			</div>
 			<div class="menu-object">
-				<p>Dificulty:</p>
-				<input type="radio" id="easy" value="easy" v-model="dificulty" checked>
+				<p>Difficulty:</p>
+				<input type="radio" id="easy" value="easy" v-model="difficulty" checked>
 				<label for="easy">Easy</label>
-				<input type="radio" id="normal" value="normal" v-model="dificulty" >
+				<input type="radio" id="normal" value="normal" v-model="difficulty" >
 				<label for="normal">Normal</label>
-				<input type="radio" id="hard" value="hard" v-model="dificulty" >
+				<input type="radio" id="hard" value="hard" v-model="difficulty" >
 				<label for="hard">Hard</label>
 			</div>
 			<button class="menu-object" v-on:click="save"> Save </button>
