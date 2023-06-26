@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<link rel="stylesheet" href="../styles/main.css">
+		<script src="../js/loader.js"></script>
+		<title> My first game - Scoreboard </title>
+	</head>
+	<body>
+		<div id="scoreboard_id">
+			<p class="menu-object" id="title">SCORES</p>
+			<div v-for="(score, indx) in scores.slice(0, 10)">
+				<div class="horizontal_container">
+					<label class="sc"></label>
+					<label class="sc">{{score.username}}</label>
+                    <div class="vertical_container">
+                        <label class="sc">{{score.punts}}</label>
+                        <label class="sc">{{score.level}}</label>
+                    </div>
+					<label class="sc"></label>
+				</div>
+			</div>
+		</div>
+		<a class="menu-object" href="../">GoToMenu</a>
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+	<script src="../js/scoreboard.js"></script>
+</html>
+

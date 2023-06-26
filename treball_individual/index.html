@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<link rel="stylesheet" href="./styles/main.css">
+		<script src="./js/loader.js"></script>
+		<script src="./js/game_info.js"></script>
+		<title> My first game - Menu </title>
+	</head>
+	<body>
+		<div class="menu-object" id="id_menu">
+			<p class="menu-object" id="title">Memory menu</p>
+			<button class="menu-object" v-on:click="start_game()"> 
+				Start Game
+			</button>
+			<!--<button class="menu-object" onclick="start_game()"> 
+				Start Game -->
+			</button>
+			<button class="menu-object"  v-on:click="load()"> 
+				Load Game 
+			</button>
+			<button class="menu-object" v-on:click="scoreboard()">
+				Score Board
+			</button>
+			<button class="menu-object"  v-on:click="options()"> 
+				Options 
+			</button>
+			<button class="menu-object"  v-on:click="exit()"> 
+				Exit 
+			</button>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+		<script src="./js/menu_controller.js"></script>
+	</body>
+</html>
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<link rel="stylesheet" href="../styles/main.css">
+		<script src="../js/loader.js"></script>
+		<title> My first game - Options </title>
+	</head>
+	<body>
+		<div id="options_id">
+			<p class="menu-object" id="title">Options menú</p>
+			<div class="menu-object">
+				<p>Escolleix Mode Joc</p>
+				<input type="radio" id="mode1" value="mode1" v-model="mode" checked>
+				<label for="mode1">Mode 1</label>
+				<input type="radio" id="mode2" value="mode2" v-model="mode">
+				<label for="mode2">Mode 2</label>
+			</div>
+			<p>Mode individual</p>
+			<div class="menu-object">
+				<label for="labelnumber">Number of cards:</label>
+				<input type="number" id="labelnumber" v-model="num">
+			</div>
+			<div class="menu-object">
+				<p>Difficulty:</p>
+				<input type="radio" id="easy" value="easy" v-model="difficulty" checked>
+				<label for="easy">Easy</label>
+				<input type="radio" id="normal" value="normal" v-model="difficulty" >
+				<label for="normal">Normal</label>
+				<input type="radio" id="hard" value="hard" v-model="difficulty" >
+				<label for="hard">Hard</label>
+			</div>
+			<p>Mode Infinit</p>
+			<div class="menu-object">
+				<label for="lvlDifficultyNumber">Difficulty level:</label>
+				<input type="number" id="lvlDifficultyNumber" v-model="lvlDifficulty">
+				<button class="menu-object" v-on:click="save"> Save </button>
+				<button class="menu-object" v-on:click="discard"> Discard </button>
+			</div>
+		</div>
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+	<script src="../js/options.js"></script>
+</html>
+

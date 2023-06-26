@@ -37,3 +37,30 @@ button.menu-object:hover:not(:active){
 	height: 85px;
 }
 
+.horizontal_container {
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 10rem 10rem 1fr;
+	grid-gap: 0.625rem;
+	border: 1px;
+	border-radius: 10px	;
+	border-style: solid;
+	width: fit-content;
+	margin:auto;
+	border-color: black;
+	margin-bottom: 5px;
+}
+
+.vertical_container{
+	text-align: center;
+	display: grid;
+	grid-row: auto;
+	grid-gap: 0.625rem;
+}
+
+.sc{
+	font-weight: bold;
+	font-size: 0.8em;
+    text-transform: uppercase;
+}
+
